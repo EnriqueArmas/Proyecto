@@ -1,0 +1,151 @@
+-------- Windows form-------
+public partial class LeyForm : Form
+    {
+        int i = 0;
+        string[] users = new string[6];
+        public LeyForm()
+        {
+            InitializeComponent();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            textBox1.Enabled = false;
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            textBox1.Enabled = true; //Modifica la ley
+        }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = textBox1.Text;
+            textBox3.Text = textBox1.Text; //   Se copian las leyes en un array
+            textBox4.Text = textBox1.Text;
+            textBox5.Text = textBox1.Text;
+            textBox6.Text = textBox1.Text;
+            string[] sley = new string[6] { (textBox1.Text),(textBox2.Text), (textBox3.Text), (textBox4.Text), (textBox5.Text), (textBox6.Text) };
+        }
+    }
+    
+    -------------
+     public partial class UsuarioForm : Form
+    {
+        int i = 0;
+        Usuario Group = new Usuario();
+        string[] theArray;
+         
+
+        public UsuarioForm()
+        {
+            InitializeComponent();
+            Usuario Group = new Usuario();
+            
+            
+        }
+       
+        private void btnAdd_Click(object sender, EventArgs e) //Se añaden los usuarios
+        {
+            textBox3.Enabled = false;
+            textBox4.Enabled = false;
+            textBox5.Enabled = false;
+            textBox6.Enabled = false;
+            textBox7.Enabled = false;
+            textBox8.Enabled = false;
+            textBox9.Enabled = false;
+            textBox10.Enabled = false;
+            string[] users = new string[9] { (textBox1.Text), (textBox3.Text), (textBox4.Text), (textBox5.Text), (textBox6.Text), (textBox7.Text), (textBox8.Text), (textBox9.Text), (textBox10.Text) }; //Se crea un vector
+            for (int i = 0; i < 9; i++)
+            {
+                MessageBox.Show("El grupo esta formado por " + users[i]); //Se muestra el mensaje de los usuarios
+            }
+            theArray = users;
+        }
+           
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            textBox1.Enabled = false; //Se desactiva para agregar
+           
+        }
+       
+
+        private void btnMod2_Click(object sender, EventArgs e)
+        {
+            textBox1.Enabled = true; //Se activa para cambiar 
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            textBox3.Enabled = true;
+            textBox4.Enabled = true;
+            textBox5.Enabled = true;
+            textBox6.Enabled = true;
+            textBox7.Enabled = true;
+            textBox8.Enabled = true; // Se activan para modificar todos los usuarios
+            textBox9.Enabled = true;
+            textBox10.Enabled = true;
+        }
+        
+    }
+    -------------------------------
+    public partial class ReglaForm : Form
+    {
+        public ReglaForm()
+        {
+            InitializeComponent();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            textBox2.Enabled = false;
+        }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            textBox9.Text = textBox2.Text; //Al apacharse se copian
+            textBox8.Text = textBox2.Text;
+            textBox7.Text = textBox2.Text;
+            textBox3.Text = textBox2.Text;
+            textBox4.Text = textBox2.Text;
+            textBox5.Text = textBox2.Text;
+            textBox6.Text = textBox2.Text;
+            string[] sley = new string[8] { (textBox7.Text), (textBox2.Text), (textBox3.Text), (textBox4.Text), (textBox5.Text), (textBox6.Text), (textBox8.Text), (textBox9.Text)};
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            textBox2.Enabled = true;
+        }
+    }
+    ------------------------------------
+    public partial class LeyForm : Form
+    {
+        int i = 0;
+        string[] users = new string[6];
+        public LeyForm()
+        {
+            InitializeComponent();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            textBox1.Enabled = false;
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            textBox1.Enabled = true; //Modifica la ley
+        }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = textBox1.Text;
+            textBox3.Text = textBox1.Text; //   Se copian las leyes en un array
+            textBox4.Text = textBox1.Text;
+            textBox5.Text = textBox1.Text;
+            textBox6.Text = textBox1.Text;
+            string[] sley = new string[6] { (textBox1.Text),(textBox2.Text), (textBox3.Text), (textBox4.Text), (textBox5.Text), (textBox6.Text) };
+        }
+    }
